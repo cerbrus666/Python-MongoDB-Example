@@ -110,8 +110,10 @@ class CustomTableModel(QtCore.QAbstractTableModel):
             if index.column() == 1:
                 selected_row = self.user_data[index.row()]
                 image_data = selected_row['photo']
+                with open(image_data, 'rb') as f:
+                    content = f.read()
                 image = QtGui.QImage()
-                image.loadFromData(image_data)
+                image.loadFromData(content)
                 icon = QtGui.QIcon()
                 icon.addPixmap(QtGui.QPixmap.fromImage(image))
                 return icon

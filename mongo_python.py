@@ -55,6 +55,7 @@ class PythonMongoDB(main.Ui_MainWindow, QtWidgets.QMainWindow):
 
 
         self.user_data = databaseOperations.get_multiple_data()
+        print(self.user_data)
         self.model = customModel.CustomTableModel(self.user_data)
         self.delegate = customModel.InLineEditDelegate()
         self.tableView.setModel(self.model)
