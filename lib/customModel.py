@@ -39,9 +39,9 @@ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
-from PySide2 import QtWidgets
-from PySide2 import QtCore
-from PySide2 import QtGui
+from PySide6 import QtWidgets
+from PySide6 import QtCore
+from PySide6 import QtGui
 from lib import databaseOperations
 
 

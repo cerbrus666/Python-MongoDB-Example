@@ -52,13 +52,20 @@ database = connection['my_database']
 collection = database['my_collection']
 print("Database connected")
 
-
 def insert_data(data):
     """
     Insert new data or document in collection
     :param data:
     :return:
     """
+    # CONNECT TO DATABASE
+    connection = pymongo.MongoClient("localhost", 27017)
+
+    # CREATE DATABASE
+    database = connection['my_database']
+    # CREATE COLLECTION
+    collection = database['my_collection']
+    print(data)
     document = collection.insert_one(data)
     return document.inserted_id
 
@@ -91,6 +98,13 @@ def get_multiple_data():
     get document data by document ID
     :return:
     """
+        # CONNECT TO DATABASE
+    connection = pymongo.MongoClient("localhost", 27017)
+
+    # CREATE DATABASE
+    database = connection['my_database']
+    # CREATE COLLECTION
+    collection = database['my_collection']
     data = collection.find()
     return list(data)
 

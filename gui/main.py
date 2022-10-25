@@ -8,7 +8,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PySide2 import QtCore, QtGui, QtWidgets
+from PySide6 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -74,7 +74,7 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.actionAbout_Application = QtWidgets.QAction(MainWindow)
+        self.actionAbout_Application = QtGui.QAction(MainWindow)
         self.actionAbout_Application.setIcon(icon)
         self.actionAbout_Application.setObjectName("actionAbout_Application")
         self.menuAbout.addAction(self.actionAbout_Application)

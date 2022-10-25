@@ -40,9 +40,9 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-from PySide2 import QtWidgets
-from PySide2 import QtGui
-from PySide2 import QtCore
+from PySide6 import QtWidgets
+from PySide6 import QtGui
+from PySide6 import QtCore
 from gui import main
 from lib import databaseOperations
 from lib import customModel
@@ -53,8 +53,6 @@ class PythonMongoDB(main.Ui_MainWindow, QtWidgets.QMainWindow):
         super(PythonMongoDB, self).__init__()
         self.setupUi(self)
 
-        # data = {'photo': ":/icons/images/photo.jpg",  'name': 'rajiv'}
-        # databaseOperations.insert_data(data)
 
         self.user_data = databaseOperations.get_multiple_data()
         self.model = customModel.CustomTableModel(self.user_data)
