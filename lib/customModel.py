@@ -110,6 +110,7 @@ class CustomTableModel(QtCore.QAbstractTableModel):
             if index.column() == 1:
                 selected_row = self.user_data[index.row()]
                 image_data = selected_row['photo']
+                print(image_data)
                 with open(image_data, 'rb') as f:
                     content = f.read()
                 image = QtGui.QImage()
